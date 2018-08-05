@@ -58,66 +58,71 @@
     <url-pattern>/naglowki</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>FiltrOpcja</servlet-name>
-  	<servlet-class>cwiczenia.serwlety.FiltrSerwlet</servlet-class>
+    <servlet-name>FiltrOpcja</servlet-name>
+    <servlet-class>cwiczenia.serwlety.FiltrSerwlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>FiltrOpcja</servlet-name>
-  	<url-pattern>/filtrOpcja</url-pattern>
+    <servlet-name>FiltrOpcja</servlet-name>
+    <url-pattern>/filtrOpcja</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>CwiczeniaJSTL</servlet-name>
+  	<servlet-class>cwiczenia.jstl.CwiczeniaJSTL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CwiczeniaJSTL</servlet-name>
+  	<url-pattern>/cwiczJSTL</url-pattern>
   </servlet-mapping>
   <listener>
     <listener-class>cwiczenia.sluchacze.SluchaczeKontekstu</listener-class>
   </listener>
-<!--   <listener> -->
-<!--   	<listener-class>cwiczenia.sluchacze.KreatorSluchaczy</listener-class> -->
-<!--   </listener> -->
-<login-config>
-	<auth-method>BASIC</auth-method>
-</login-config>
-<security-role>
-	<role-name>admin</role-name>
-</security-role>
-<security-role>
-	<role-name>uzytkownik</role-name>
-</security-role>
-<security-constraint>
-	<web-resource-collection>
-		<web-resource-name>Regula</web-resource-name>
-		<url-pattern>*.jsp</url-pattern>
-		<url-pattern>/sesja</url-pattern>
-		<url-pattern>/formularze</url-pattern>
-		<url-pattern>/pobierz</url-pattern>
-		<http-method>GET</http-method>	
-	</web-resource-collection>
-	<auth-constraint>
-		<role-name>admin</role-name>
-	</auth-constraint>
-	<user-data-constraint>
-		<transport-guarantee>NONE</transport-guarantee>
-	</user-data-constraint>
-</security-constraint>
-<filter>
-	<filter-name>FiltrRegulowy</filter-name>
-	<filter-class>cwiczenia.filtry.FiltrRegulowy</filter-class>
-</filter>
-<filter-mapping>
-	<filter-name>FiltrRegulowy</filter-name>
-	<url-pattern>/filtrOpcja</url-pattern>
-</filter-mapping>
-<servlet>
-	<servlet-name>Powitanie2</servlet-name>
-	<servlet-class>cwiczenia.dispatch.Powitanie</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>Powitanie2</servlet-name>
-	<url-pattern>/witaj2</url-pattern>
-</servlet-mapping>
-<servlet>
-	<servlet-name>ListaUzytkownikow</servlet-name>
-	<servlet-class>cwiczenia.dispatch.ListaUzytkownikow</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>ListaUzytkownikow</servlet-name>
-	<url-pattern>/drugi</url-pattern>
-</servlet-mapping>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+  </login-config>
+  <security-role>
+    <role-name>admin</role-name>
+  </security-role>
+  <security-role>
+    <role-name>uzytkownik</role-name>
+  </security-role>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Regula</web-resource-name>
+      <url-pattern>*.jsp</url-pattern>
+      <url-pattern>/sesja</url-pattern>
+      <url-pattern>/formularze</url-pattern>
+      <url-pattern>/pobierz</url-pattern>
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+  <filter>
+    <filter-name>FiltrRegulowy</filter-name>
+    <filter-class>cwiczenia.filtry.FiltrRegulowy</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FiltrRegulowy</filter-name>
+    <url-pattern>/filtrOpcja</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Powitanie2</servlet-name>
+    <servlet-class>cwiczenia.dispatch.Powitanie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Powitanie2</servlet-name>
+    <url-pattern>/witaj2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListaUzytkownikow</servlet-name>
+    <servlet-class>cwiczenia.dispatch.ListaUzytkownikow</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListaUzytkownikow</servlet-name>
+    <url-pattern>/drugi</url-pattern>
+  </servlet-mapping>
 </web-app>

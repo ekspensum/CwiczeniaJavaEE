@@ -23,7 +23,17 @@ ${wartosc }
 ${applicationScope }
 ${pageScope }
 ${pageContext. } --%>
-${uzytkownik.idUser } ${uzytkownik.imie } ${uzytkownik.nazwisko }
-<p></body><a href="/Pierwszy/witaj">Powitanie</a>
+${uzytkownik.idUser } ${uzytkownik.imie} ${uzytkownik.imie eq 'Adam' } ${uzytkownik.nazwisko }
+<p></body><a href="/Pierwszy/witaj">Powitanie</a><br/>
+<!-- Akcje -->
+<%-- <%@page import="cwiczenia.dispatch.Uzytkownik" %> --%>
+<jsp:include page="tresc.jsp">
+	<jsp:param value="Tekst do wyświetlenia" name="doWyswietlenia"/>
+</jsp:include><br/>
+<jsp:useBean id="aktywny" scope="session" class="cwiczenia.dispatch.Uzytkownik">
+<%-- 	<jsp:setProperty name="aktywny" property="imie" value="coś tm"/> --%>
+</jsp:useBean>
+<jsp:getProperty property="imie" name="aktywny"/>
+<%-- 	<jsp:setProperty property="imie" value="JakieśImie" name="aktywny"/> --%>
 </body>
 </html>
