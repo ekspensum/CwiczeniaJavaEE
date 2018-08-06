@@ -26,6 +26,7 @@ public class PierwszySerwlet extends HttpServlet {
 	 	pw.println("<li><a href=\"/Pierwszy/witaj2\">Witaj2 - dispatch</a></li>");
 	 	pw.println("<li><a href=\"/Pierwszy/drugi\">Uzytkownicy</a></li>");
 	 	pw.println("<li><a href=\"/Pierwszy/cwiczJSTL\">Ćwiczenia JSTL</a></li>");
+	 	pw.println("<li><a href=\"/Pierwszy/cwiczJDBC\">Ćwiczenia JDBC</a></li>");
 	 	pw.println("</ol></body></html>");
 	}
 

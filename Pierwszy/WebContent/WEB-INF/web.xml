@@ -66,12 +66,12 @@
     <url-pattern>/filtrOpcja</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>CwiczeniaJSTL</servlet-name>
-  	<servlet-class>cwiczenia.jstl.CwiczeniaJSTL</servlet-class>
+    <servlet-name>CwiczeniaJSTL</servlet-name>
+    <servlet-class>cwiczenia.jstl.CwiczeniaJSTL</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>CwiczeniaJSTL</servlet-name>
-  	<url-pattern>/cwiczJSTL</url-pattern>
+    <servlet-name>CwiczeniaJSTL</servlet-name>
+    <url-pattern>/cwiczJSTL</url-pattern>
   </servlet-mapping>
   <listener>
     <listener-class>cwiczenia.sluchacze.SluchaczeKontekstu</listener-class>
@@ -124,5 +124,13 @@
   <servlet-mapping>
     <servlet-name>ListaUzytkownikow</servlet-name>
     <url-pattern>/drugi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>CwiczeniaJDBC</servlet-name>
+  	<servlet-class>cwiczenia.jdbc.CwiczeniaJDBC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CwiczeniaJDBC</servlet-name>
+  	<url-pattern>/cwiczJDBC</url-pattern>
   </servlet-mapping>
 </web-app>
